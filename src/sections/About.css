@@ -1,0 +1,29 @@
+.about {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 2rem 16rem 2rem;
+    box-sizing: border-box;
+    position: relative;
+    background: radial-gradient(circle at 50% 50%, rgba(170, 59, 255, 0.04) 0%, rgba(22, 23, 29, 0) 70%), var(--bg);
+    border-top: 1px solid var(--border);
+}
+
+.about-heading {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.about-heading h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    letter-spacing: -2px;
+    margin: 0;
+    font-weight: 700;
+    color: var(--text-h);
+}

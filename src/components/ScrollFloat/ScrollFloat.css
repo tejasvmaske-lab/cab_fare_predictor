@@ -1,0 +1,16 @@
+.scroll-float {
+  overflow: hidden;
+}
+
+.scroll-float-text {
+  display: inline-block;
+  font-size: clamp(1.5rem, 3.2vw, 4rem);
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.6;
+  color: var(--text-h);
+}
+
+.char {
+  display: inline-block;
+}
