@@ -21,7 +21,7 @@ const cardData = [
     label: "Overview",
     title: "About the Model",
     description:
-    "A Machine Learning model that estimates cab fares using travel distance as the only input feature. Built as an educational demonstration of Linear Regression."
+    "A ML model that estimates cab fares using travel distance as the only input feature. Built as an educational demonstration of Linear Regression."
   },
 
   {
@@ -53,7 +53,7 @@ const cardData = [
     label: "Limitations",
     title: "Educational Project",
     description:
-    "Predictions are based only on travel distance. Traffic, surge pricing, tolls, weather, passenger count, and time of day are not considered, so results should be treated as fare estimates."
+    "Predictions are based only on travel distance. Traffic, surge pricing, tolls, weather, etc. are not considered, so results should be treated as fare estimates."
   }
 ];
 
