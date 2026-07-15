@@ -4,6 +4,8 @@ import BorderGlow from "../components/BorderGlow/BorderGlow";
 import Counter from "../components/Counter/Counter";
 import Button from "../components/Button/Button";
 import Button2 from "../components/Button2/Button2";
+import Loader from "../components/Loader/Loader";
+
 import './Prediction.css';
 
 function Prediction() {
@@ -24,6 +26,16 @@ function Prediction() {
         setDistance((prevDistance) => prevDistance - 0.1);
     }; 
     
+    const [isLoading, setIsLoading] = useState(false);
+    const handlePredict = () => {
+        setIsLoading(true);
+        //add a delay to show loader for 1 second
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 1000);
+        isLoading == true ? <Loader /> : null;
+    };
+
     return (
         <>
             <section className="header-section">
@@ -49,7 +61,6 @@ function Prediction() {
             >
                 <div className="prediction-card-content">
                     <Counter
-                    value={10}
                     places={[100, 10, 1, '.', 0.1]}
                     fontSize={80}
                     padding={5}
@@ -73,8 +84,9 @@ function Prediction() {
                     <Button text="20" onClick={() => setDistance(20)} />
                 </div>
                 <div className="quick-controls">
-                    <Button2 text="Predict" onClick={() => console.log("Predict button clicked")} />
+                    <Button2 text="Predict" onClick={handlePredict} />
                 </div>
+                {isLoading && <Loader />}   {/* Show loader when isLoading is true */}
             </BorderGlow>
             </section>
         </>
