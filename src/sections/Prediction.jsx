@@ -26,14 +26,26 @@ function Prediction() {
         setDistance((prevDistance) => prevDistance - 0.1);
     }; 
     
+    const [fare, setFare] = useState(null);
+    const [showResult, setShowResult] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const handlePredict = () => {
+    const handlePredict = async () => {
         setIsLoading(true);
+        const response = await fetch("http://127.0.0.1:5000/predict", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                distance: distance,
+            }),
+        });
+        const data = await response.json();
+        setFare(data.fare);
+        setShowResult(true);
         //add a delay to show loader for 1 second
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 1000);
-        isLoading == true ? <Loader /> : null;
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        setIsLoading(false);
     };
 
     return (
@@ -87,6 +99,17 @@ function Prediction() {
                     <Button2 text="Predict" onClick={handlePredict} />
                 </div>
                 {isLoading && <Loader />}   {/* Show loader when isLoading is true */}
+                <div className="result-card">
+
+    <h3>Prediction Complete</h3>
+
+    <h1>${fare?.toFixed(2)}</h1>
+
+    <p>
+        Based on a distance of {distance} km
+    </p>
+
+</div>
             </BorderGlow>
             </section>
         </>
