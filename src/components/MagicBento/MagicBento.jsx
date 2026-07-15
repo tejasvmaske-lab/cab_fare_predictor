@@ -9,40 +9,51 @@ const MOBILE_BREAKPOINT = 768;
 
 const cardData = [
   {
-    color: '#120F17',
-    title: 'Analytics',
-    description: 'Track user behavior',
-    label: 'Insights'
+    color: "#120F17",
+    label: "Region",
+    title: "New York City",
+    description:
+    "This model is trained exclusively on New York City cab trip data. Predictions are designed specifically for NYC and may not generalize to other cities."
   },
+
   {
-    color: '#120F17',
-    title: 'Dashboard',
-    description: 'Centralized data view',
-    label: 'Overview'
+    color: "#120F17",
+    label: "Overview",
+    title: "About the Model",
+    description:
+    "A Machine Learning model that estimates cab fares using travel distance as the only input feature. Built as an educational demonstration of Linear Regression."
   },
+
   {
-    color: '#120F17',
-    title: 'Collaboration',
-    description: 'Work together seamlessly',
-    label: 'Teamwork'
+    color: "#120F17",
+    label: "Training Data",
+    title: "193,806 Cab Trips",
+    description:
+    "The original dataset contained nearly 200,000 rides. During preprocessing, missing values, invalid coordinates, zero-distance trips, and unrealistic long-distance outliers were removed, resulting in a cleaner dataset of 193,806 trips."
   },
+
   {
-    color: '#120F17',
-    title: 'Automation',
-    description: 'Streamline workflows',
-    label: 'Efficiency'
+    color: "#120F17",
+    label: "Algorithm",
+    title: "Linear Regression",
+    description:
+    "Implemented completely from scratch using Gradient Descent. The model learns the relationship between travel distance and fare by minimizing the prediction error, without relying on pre-built regression libraries."
   },
+
   {
-    color: '#120F17',
-    title: 'Integration',
-    description: 'Connect favorite tools',
-    label: 'Connectivity'
+    color: "#120F17",
+    label: "Input",
+    title: "Distance (km)",
+    description:
+    "The only feature required by the model is the trip distance in kilometers. Based on this value, it estimates the expected cab fare."
   },
+
   {
-    color: '#120F17',
-    title: 'Security',
-    description: 'Enterprise-grade protection',
-    label: 'Protection'
+    color: "#120F17",
+    label: "Limitations",
+    title: "Educational Project",
+    description:
+    "Predictions are based only on travel distance. Traffic, surge pricing, tolls, weather, passenger count, and time of day are not considered, so results should be treated as fare estimates."
   }
 ];
 
