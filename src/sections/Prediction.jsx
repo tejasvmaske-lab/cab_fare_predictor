@@ -31,7 +31,7 @@ function Prediction() {
     const [isLoading, setIsLoading] = useState(false);
     const handlePredict = async () => {
         setIsLoading(true);
-        const response = await fetch("https://cab-fare-predictor.onrender.com", {
+        const response = await fetch("https://cab-fare-predictor.onrender.com/predict", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
