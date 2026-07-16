@@ -106,7 +106,7 @@ function Prediction() {
     <h1>${fare?.toFixed(2)}</h1>
 
     <p>
-        Based on a distance of {distance} km
+        Based on a distance of {distance.toFixed(1)} km
     </p>
 
 </div>
